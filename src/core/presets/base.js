@@ -7,6 +7,7 @@ import logs from "core/plugins/logs"
 import ast from "core/plugins/ast"
 import swaggerJs from "core/plugins/swagger-js"
 import auth from "core/plugins/auth"
+import authSpec from "core/plugins/auth-spec"
 import util from "core/plugins/util"
 import SplitPaneModePlugin from "core/plugins/split-pane-mode"
 import downloadUrlPlugin from "core/plugins/download-url"
@@ -130,6 +131,7 @@ export default function() {
     swaggerJs,
     jsonSchemaComponents,
     auth,
+    authSpec,
     ast,
     SplitPaneModePlugin,
     downloadUrlPlugin,
