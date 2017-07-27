@@ -1,11 +1,6 @@
-export function authorize(ori, {specActions, authActions}) {
-  specActions.download()
-  authActions.showDefinitions(false)
-  return ori
-}
-
-export function logout(ori, {specActions, authActions}) {
-  specActions.download()
-  authActions.showDefinitions(false)
-  return ori
+export const showDefinitions = (ori, {specActions}) => (payload) => {
+  if (payload === false) {
+    specActions.download()
+  }
+  return ori(payload)
 }
